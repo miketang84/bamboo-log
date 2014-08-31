@@ -2,7 +2,7 @@
 local APPNAME = APPNAME or 'log'
 local LOGDIR = LOGDIR or '/tmp'
 local LOGPAT = LOGPAT or 'single' -- single or by_day
-local DAEMON = DAEMON or true
+local DAEMON = (type(DAEMON) ~= 'nil') and DAEMON
 
 if DAEMON then
 	require 'daemon'
